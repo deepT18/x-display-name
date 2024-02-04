@@ -8,20 +8,22 @@ function App() {
   const [lastName,setLastName]=useState('')
   const [fullName,setFullName]=useState('')
 
- const validateInput=()=>{
-  if(firstName===""||lastName===""){
-    alert("Please Fill out This Field")
-    return false;
-  }else{
-    return true;
-  }
- }
+//  const validateInput=()=>{
+//   if(firstName===""||lastName===""){
+//     return false;
+//   }else{
+//     return true;
+//   }
+//  }
 
  const onSubmit=(e)=>{
   e.preventDefault()
-  if(validateInput()){
-    setFullName(`Full Name: ${firstName} ${lastName}`)
-  }
+ if(firstName===""||lastName===""){
+  // alert('please fill the details')
+  return false;
+ }else{
+  setFullName(`Full Name:${firstName} ${lastName}`)
+ }
  }
 
   return (
