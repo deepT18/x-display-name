@@ -10,7 +10,7 @@ function App() {
 
  const validateInput=()=>{
   if(firstName===""||lastName===""){
-    
+    alert("Please Fill out This Field")
     return false;
   }else{
     return true;
