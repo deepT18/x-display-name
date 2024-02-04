@@ -25,12 +25,12 @@ function App() {
  }
 
   return (
-    <form onClick={onSubmit}>
+    <form type="text" onClick={onSubmit}>
      <h2>Full Name Display</h2>
      <label>First Name:</label>
-     <input onChange={(e) => setFirstName(e.target.value)} value={firstName} placeholder="Enter First Name"/><br/>
+     <input type="text" onChange={(e) => setFirstName(e.target.value)} value={firstName} placeholder="Enter First Name"/><br/>
      <label>Last Name:</label>
-     <input onChange={(e) => setLastName(e.target.value)} value={lastName} placeholder="Enter Last Name"/><br/>
+     <input type="text" onChange={(e) => setLastName(e.target.value)} value={lastName} placeholder="Enter Last Name"/><br/>
      <button>Submit</button>
      <p value={fullName}>{fullName}</p>
     </form>
