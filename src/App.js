@@ -7,6 +7,7 @@ function App() {
   const [firstName,setFirstName]=useState('')
   const [lastName,setLastName]=useState('')
   const [fullName,setFullName]=useState('')
+  const [showFullName, setShowFullName] = useState(false)
 
 //  const validateInput=()=>{
 //   if(firstName===""||lastName===""){
@@ -19,11 +20,11 @@ function App() {
  const onSubmit=(e)=>{
   e.preventDefault()
  if(firstName===""||lastName===""){
+  setShowFullName(false)
   // alert('please fill the details')
-  setFullName('')
-  return false;
  }else{
   setFullName(`Full Name: ${firstName} ${lastName}`)
+  setShowFullName(true)
  }
  }
 
@@ -37,7 +38,7 @@ function App() {
      <input type="text" onChange={(e) => setLastName(e.target.value)} value={lastName} placeholder="Enter Last Name"/><br/>
      <button type="submit">Submit</button>
     </form>
-    <p>{fullName}</p>
+    {showFullName && <p>{fullName}</p>}
     </div>
   );
 }
