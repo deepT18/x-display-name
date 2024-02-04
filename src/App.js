@@ -20,6 +20,7 @@ function App() {
   e.preventDefault()
  if(firstName===""||lastName===""){
   // alert('please fill the details')
+  setFullName('')
   return false;
  }else{
   setFullName(`Full Name: ${firstName} ${lastName}`)
