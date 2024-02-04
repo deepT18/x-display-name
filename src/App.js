@@ -27,6 +27,7 @@ function App() {
  }
 
   return (
+    <div>
     <form type="text">
      <h2>Full Name Display</h2>
      <label>First Name:</label>
@@ -34,8 +35,9 @@ function App() {
      <label>Last Name:</label>
      <input type="text" onChange={(e) => setLastName(e.target.value)} value={lastName} placeholder="Enter Last Name"/><br/>
      <button onClick={onSubmit} type="submit">Submit</button>
-     <p value={fullName}>{fullName}</p>
     </form>
+    <p value={fullName}>{fullName}</p>
+    </div>
   );
 }
 
