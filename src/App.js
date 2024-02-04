@@ -22,7 +22,7 @@ function App() {
   // alert('please fill the details')
   return false;
  }else{
-  setFullName(`Full Name:${firstName} ${lastName}`)
+  setFullName(`Full Name: ${firstName} ${lastName}`)
  }
  }
 
@@ -36,7 +36,7 @@ function App() {
      <input type="text" onChange={(e) => setLastName(e.target.value)} value={lastName} placeholder="Enter Last Name"/><br/>
      <button type="submit">Submit</button>
     </form>
-    <p value={fullName}>{fullName}</p>
+    <p>{fullName}</p>
     </div>
   );
 }
