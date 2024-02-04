@@ -28,13 +28,13 @@ function App() {
 
   return (
     <div>
-    <form type="text">
+    <form onClick={onSubmit} type="text">
      <h2>Full Name Display</h2>
      <label>First Name:</label>
      <input type="text" onChange={(e) => setFirstName(e.target.value)} value={firstName} placeholder="Enter First Name"/><br/>
      <label>Last Name:</label>
      <input type="text" onChange={(e) => setLastName(e.target.value)} value={lastName} placeholder="Enter Last Name"/><br/>
-     <button onClick={onSubmit} type="submit">Submit</button>
+     <button type="submit">Submit</button>
     </form>
     <p value={fullName}>{fullName}</p>
     </div>
